@@ -1,0 +1,22 @@
+template(name='layout_default')
+
+	+wrapper
+
+		+mainHeader
+			+navbar
+				+navbarMenu icon='fa-envelope-o' label=12 style='label-success'
+				+navbarMenu icon='fa-bell-o' label=12 style='label-success'
+				+navbarMenu icon='fa-flag-o' label=12 style='label-success'
+
+		+mainSidebar
+			+userPanel
+
+		+contentWrapper
+
+		+mainFooter
+			.pull-right.hidden-xs pull-right
+			strong footer
+
+template(name='layout_blank')
+
+	+yield

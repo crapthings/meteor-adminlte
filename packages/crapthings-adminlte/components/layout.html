@@ -1,0 +1,72 @@
+<template name="wrapper">
+
+  <div class="wrapper">
+    {{> Template.contentBlock}}
+  </div>
+
+</template>
+
+<template name="mainHeader">
+
+  <div class="main-header">
+    <a href="#" class="logo">logo</a>
+    <div class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        {{> Template.contentBlock}}
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<template name="contentWrapper">
+
+  <div class="content-wrapper">
+    <div class="content-header">
+      <h1>title</h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </div>
+    <div class="content">
+      {{> yield}}
+    </div>
+  </div>
+
+</template>
+
+<template name="mainFooter">
+  <div class="main-footer">
+    {{> Template.contentBlock}}
+  </div>
+</template>
+
+<template name="navbar">
+  <ul class="nav navbar-nav">
+    {{> Template.contentBlock}}
+  </ul>
+</template>
+
+<template name="navbarMenu">
+  <li>
+    <a href="">
+      {{#if icon}}
+        <i class="fa {{icon}}"></i>
+      {{/if}}
+      {{name}}
+      {{#if label}}
+        {{> label style=style content=label}}
+      {{/if}}
+    </a>
+  </li>
+</template>
+
+<template name="label">
+  <span class="label {{style}}">
+    {{content}}
+  </span>
+</template>
